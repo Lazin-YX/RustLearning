@@ -1,2 +1,2 @@
 # RustLearning
-Record test code when learning rust 
+Record test code when learning ***Rust*** 
