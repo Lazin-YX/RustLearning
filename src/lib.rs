@@ -1,11 +1,11 @@
 mod worker;
 
-use std::sync::{mpsc, Arc, Mutex};
-use worker::Worker;
 use crate::Message::NewJob;
+use std::sync::{Arc, Mutex, mpsc};
+use worker::Worker;
 
 type Job = Box<dyn FnOnce() + Send + 'static>;
-enum Message {
+pub enum Message {
     NewJob(Job),
     Terminate,
 }
